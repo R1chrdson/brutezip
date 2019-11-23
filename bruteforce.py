@@ -33,8 +33,8 @@ def checkpass(z, password):
 
 # Calculates number of checks before brute force method will get this password
 # The formula is: 
-# number = d**1 + d**2 + ... + d**l-1 + (d**l-1 )*p[0] + (d**l-2)*p[1] + ... + (d**0)*p[l-1]
-# where d - alphabet of brute force method, p - password, l - len of password
+# number = d**1 + d**2 + ... + d**l-1 + (d**l-1 )*s[p[0]] + (d**l-2)*s[p[1]] + ... + (d**0)*s[p[l-1]]
+# where s - aplhabet, d - len of aplhabet, p - password, l - len of password
 def calculate(password, symbols):
     l = len(password)
     d = len(symbols)
